@@ -84,14 +84,14 @@ main {
   max-width: 1366px;
   min-width: 1024px;
 
-  @include tablet-width {
+  @include tablet {
     max-width: 1023px;
     min-width: 768px;
     padding-left: 45px;
     padding-right: 45px;
   }
 
-  @include  mobile-width {
+  @include  mobile {
     max-width: 767px;
     min-width: 320px;
     padding-left: 15px;

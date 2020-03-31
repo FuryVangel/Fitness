@@ -1,0 +1,170 @@
+.hero__content {
+    @include tablet {
+      padding-top: 20px;
+    }
+
+    @include mobile {
+      justify-content: center;
+      padding-top: 73px;
+    }
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 114px;
+  padding-left: 8.3%;
+
+  @include tablet {
+    padding-top: 54px;
+    padding-left: 90px;
+  }
+
+  @include mobile {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
+.hero__text p {
+    margin: 0 0 12px auto ;
+    width: 90px;
+    color: $white;
+    font-family: $bebas;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 1.2px;
+    order: -1;
+
+    @include tablet {
+      margin-bottom: 6px;
+      width: 62px;
+      font-size: 34px;
+      line-height: 34px;
+      letter-spacing: 1px;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+      width: 54px;
+      font-size: 28px;
+      line-height: 28px;
+    }
+}
+
+.hero__title {
+  position: relative;
+  margin-bottom: 57px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    margin-bottom: 42px;
+  }
+}
+
+.hero__title h1 {
+  width: 300px;
+  color: $white;
+  font-family: $bebas;
+  font-size: 109px;
+  font-weight: 700;
+  line-height: 109px;
+  text-align: right;
+  letter-spacing: 3px;
+
+  @include tablet {
+    width: 235px;
+    font-size: 86px;
+    line-height: 86px;
+    letter-spacing: 3px;
+  }
+
+  @include mobile {
+    margin-left: auto;
+    font-size: 78px;
+    line-height: 78px;
+  }
+}
+
+.hero__list {
+    position: absolute;
+    top: 128px;
+    left: -84px;
+    width: 120px;
+    color: $white;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: right;
+    letter-spacing: 0.1px;
+
+    @include tablet {
+    top: 93px;
+    left: -90px;
+    }
+
+    @include mobile {
+    top: 82px;
+    left: 0;
+    }
+}
+
+.hero__link {
+  margin-bottom: 94px;
+  margin-left: auto;
+  width: 234px;
+  height: 61px;
+  letter-spacing: 0.5px;
+
+  @include tablet {
+    margin-bottom: 108px;
+    width: 187px;
+  }
+
+  @include mobile {
+    margin-bottom: 78px;
+    width: 294px;
+    height: 63px;
+  }
+}
+
+.hero__socials {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 92px;
+    margin-left: auto;    
+
+    li {
+        text-align: right;
+
+        &:hover,
+        &:focus {
+          opacity: 0.8;
+        }
+
+        &:active {
+          opacity: 0.6;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+    }
+
+    a {
+        color: $white;
+        font-family: $roboto;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+
+    @include tablet {
+      display: none;
+    }
+}

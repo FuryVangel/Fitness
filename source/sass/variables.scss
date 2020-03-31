@@ -13,13 +13,13 @@ $blueExtra: #1c3374;
 $text-color: #102654;
 $grey: #495a7d;
 
-@mixin tablet-width {
+@mixin tablet {
   @media screen and (max-width: 1199px) {
     @content;
   }
 }
 
-@mixin mobile-width {
+@mixin mobile {
   @media screen and (max-width: 767px) {
     @content;
   }
@@ -35,12 +35,12 @@ $grey: #495a7d;
   line-height: 49px;
   letter-spacing: 1.5px;
 
-  @include tablet-width {
+  @include tablet {
     font-size: 42px;
     line-height: 42px;
   }
 
-  @include mobile-width {
+  @include mobile {
     font-size: 32px;
     line-height: 32px;
     letter-spacing: 1px;
