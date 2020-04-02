@@ -99,6 +99,7 @@
 .gym__img img{
   width: 660px;
   height: 401px;
+  background-color: #BFC0CA;
 
   @include tablet {
     width: 678px;
@@ -162,6 +163,8 @@
 }
 
 .gym__video img {
+  background-color: #BFC0CA;
+  
   @include tablet {
     width: 266px;
     height: 167px;

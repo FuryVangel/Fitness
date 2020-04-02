@@ -92,7 +92,21 @@
       height: 384px;
     }
 
-    &:hover,
+    &:hover{
+      border: 7px solid;
+      border-image: linear-gradient(143.02deg, #d10a42 0.85%, #00359f 100%);
+      border-image-slice: 1;
+
+      .tab-content__link {
+        width: 207px;
+        height: 64px;
+        border: none;
+        background-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+        color: $white;
+        transition: none;
+      }
+    }
+
     &:focus-within {
       border: 7px solid;
       border-image: linear-gradient(143.02deg, #d10a42 0.85%, #00359f 100%);
