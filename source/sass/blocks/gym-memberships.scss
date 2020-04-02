@@ -1,39 +1,48 @@
 .gym-memberships {
-    padding-top: 121px;
+    padding-top: 60px;
     padding-bottom: 120px;
     background-color: $bg-grey;
     overflow: hidden;
 
     @include tablet {
-      padding-top: 100px;
+      padding-top: 50px;
       padding-bottom: 100px;
     }
 
     @include mobile {
-      padding-top: 73px;
+      padding-top: 36px;
       padding-bottom: 70px;
     }
 }
 
 .gym-memberships__content {
-    flex-direction: column;
-    align-items: center;
+  padding-top: 61px;
+  flex-direction: column;
+  align-items: center;
 
-    h2 {
-      @include h2;
-      margin-bottom: 33px;
-      width: 226px;
+  @include tablet {
+    padding-top: 50px;
+  }
 
-      @include tablet {
-        margin-bottom: 29px;
-        width: 193px;
-      }
+  @include mobile {
+    padding-top: 37px;
+  }
 
-      @include mobile {
-        margin-bottom: 20px;
-        width: 147px;
-      }
+  h2 {
+    @include h2;
+    margin-bottom: 33px;
+    width: 226px;
+
+    @include tablet {
+      margin-bottom: 29px;
+      width: 193px;
     }
+
+    @include mobile {
+      margin-bottom: 20px;
+      width: 147px;
+    }
+  }
 }
 
 .gym-memberships__tab-header {
