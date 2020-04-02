@@ -23,30 +23,3 @@
     opacity: 0.8;
   }
 }
-
-.cta-btn--buy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: $roboto;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 5%;
-    color: $text-color;
-    border: 2px solid $text-color;
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 206px;
-    height: 64px;
-    
-    &:hover,
-    &:focus {
-      color: $white;
-      border: none;
-      background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
-    }
-
-    &:active {
-      opacity: 0.8;
-    }
-}
