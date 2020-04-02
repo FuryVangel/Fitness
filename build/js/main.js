@@ -3,7 +3,7 @@
 // Табы
 var jsTriggers = document.querySelectorAll('.js-tab-trigger');
 
-jsTriggers.forEach(function (trigger) {
+var tabTrigger = function (trigger) {
   trigger.addEventListener('click', function () {
     var id = this.getAttribute('data-tab');
     var content = document.querySelector('.js-tab-content[data-tab="' + id + '"]');
@@ -16,25 +16,42 @@ jsTriggers.forEach(function (trigger) {
     activeContent.classList.remove('active');
     content.classList.add('active');
   });
-});
+};
+
+for (var i = 0; i < jsTriggers.length; i++) {
+  tabTrigger(jsTriggers[i]);
+}
 
 // Скролл
-const anchors = document.querySelectorAll('a[href*="#"]')
+var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+var animationTime = 400;
+var framesCount = 20;
 
-for (let anchor of anchors) {
+var anchorTrigger = function (anchor) {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    const blockID = anchor.getAttribute('href').substr(1)
+    var coordY = document.querySelector(anchor.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
 
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
+    var scroller = setInterval(function () {
+      var scrollBy = coordY / framesCount;
+
+      if (window.pageYOffset < coordY) {
+        window.scrollBy(0, scrollBy);
+      } else {
+        window.scrollTo(0, coordY);
+        clearInterval(scroller);
+      }
+    }, animationTime / framesCount);
+  });
+};
+
+for (var j = 0; j < anchors.length; j++) {
+  anchorTrigger(anchors[j]);
 }
 
 // // Валидация для телефона
 // IMask(document.querySelector('#phone'), {
 //   mask: '+{7}(000)000-00-00'
 // });
+
