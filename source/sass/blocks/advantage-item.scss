@@ -140,12 +140,12 @@
            background-clip: text;
            -webkit-text-fill-color: transparent;
 
-           // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-           //   background: none;
-           //   background-clip: content-box;
-           //   -webkit-text-fill-color: $white;
-           // }
-
+           @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+             background: none;
+             background-clip: content-box;
+             -webkit-text-fill-color: $white;
+           }
+           
            @include tablet {
              font-size: 58px;
              line-height: 56px;
