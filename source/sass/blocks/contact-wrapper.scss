@@ -1,0 +1,8 @@
+.contact-wrapper {
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+}

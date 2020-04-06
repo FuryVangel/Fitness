@@ -1,0 +1,134 @@
+.promo-lesson {
+    width: 50%;
+    background-color: $text-color;
+    flex-shrink: 0;
+
+    @include tablet {
+      width: 100%;
+    }
+}
+
+.promo-lesson__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    padding: 68px 0 69px 103px;
+    max-width: 683px;
+
+    @include tablet {
+      align-items: center;
+      margin: 0 auto;
+      padding-right: 133px;
+      padding-bottom: 68px;
+      padding-left: 133px;
+      max-width: 1023px;
+      min-width: 768px;
+    }
+
+    @include mobile {
+      padding: 68px 15px 69px;
+      max-width: 767px;
+      min-width: 320px;
+    }
+
+    h2 {
+        @include h2;
+        color: $white;
+        margin-bottom: 45px;
+
+        @include tablet {
+          margin-bottom: 40px;
+          padding-right: 30px;
+          width: 502px;
+        }
+
+        @include mobile {
+          padding-right: 0;
+          width: 290px;
+        }
+    }
+
+    form {      
+      width: 410px;
+
+      @include tablet {
+        padding-right: 30px;
+        width: 502px;
+      }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+}
+
+.form-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 28px;
+
+    @include mobile {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    input {
+        padding-bottom: 4px;
+        width: 190px;
+        background: none;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #74819c;
+        color: $white;
+        font-family: $roboto;
+        font-size: 14px;
+        line-height: 16px;
+
+        &::placeholder {
+          color: $white;
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        @include tablet {
+          width: 206px;
+        }
+
+        @include mobile {
+          min-width: 290px;
+          margin-bottom: 37px;
+          width: 100%;
+        }
+    }
+}
+
+.promo-lesson__button {
+    width: 100%;
+    height: 55px;
+    background: none;
+    border-width: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $text-color;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+
+    @include mobile {
+        width: 290px;
+    }
+}
