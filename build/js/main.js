@@ -50,8 +50,8 @@ for (var j = 0; j < anchors.length; j++) {
   anchorTrigger(anchors[j]);
 }
 
-// // Валидация для телефона
-// IMask(document.querySelector('#phone'), {
-//   mask: '+{7}(000)000-00-00'
-// });
+// Валидация для телефона
+IMask(document.querySelector('#phone'), {
+  mask: '+{7}(000)000-00-00'
+});
 
