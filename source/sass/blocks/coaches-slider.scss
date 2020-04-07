@@ -54,10 +54,18 @@
     &:first-of-type {
       left: -35px;
       transform: rotate(180deg);
+
+      @include mobile {
+        left: -19px;
+      }
     }
 
     &:last-of-type {
       right: -35px;
+
+      @include mobile {
+        right: -19px;
+      }
     }
 }
 
@@ -82,7 +90,7 @@
     }
 
     @include mobile {
-      width: 226px;
+      width: 256px;
     }
 }
 
@@ -91,6 +99,7 @@
     transition-duration: 0.4s;
 
     > li {
+      display: inline-block;
       flex-shrink: 0;
       margin-right: 40px;
 
@@ -105,6 +114,8 @@
 
       @include mobile {
         height: 274px;
+        width: 256px;        
+        margin: 0;
       }
     }
 }

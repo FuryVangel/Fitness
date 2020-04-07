@@ -56,10 +56,6 @@
       padding-bottom: 43px;
       width: 678px;
       background-image: url("../img/fitness-bunny-tablet@1x.jpg");
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/fitness-bunny-tablet@2x.jpg");
-      }
     }
 
     @include mobile {
@@ -71,10 +67,6 @@
       height: auto;
       background-image: url("../img/fitness-bunny-mobile@1x.jpg");
       background-position: bottom;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/fitness-bunny-mobile@2x.jpg");
-      }
     }
 
     h3 {

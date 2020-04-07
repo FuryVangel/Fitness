@@ -7,7 +7,6 @@
 
     @media screen and (max-width: 1300px) {
       width: 240px;
-      height: 270px;
     }
 
     @include tablet {
@@ -17,7 +16,8 @@
 
     @include mobile {
       width: 226px;
-      height: 284px;
+      height: 274px;
+      margin: 0 15px;
     }
 }
 
@@ -117,5 +117,9 @@
     height: 294px;
     width: 100%;
     object-fit: cover;
+
+    @include mobile {
+      height: 274px;
+    }
   }
 }

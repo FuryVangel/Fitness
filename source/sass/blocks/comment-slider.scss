@@ -84,11 +84,14 @@
 
 .comment-slider__list {
     display: flex;
-    box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
     transition-duration: 0.4s;
 
     li {
       margin-right: 30px;
+
+      @include mobile {
+        margin-right: 0;
+      }
     }
 }
 
@@ -98,7 +101,7 @@
     padding-right: 62px;
     padding-bottom: 57px;
     padding-left: 170px;
-    width: 100%;
+    width: 560px;
     transform: translateX(0);
     background-color: $text-color;
     background-image: url("../img/comment-desktop@1x.png");
@@ -118,6 +121,7 @@
     }
 
     @include mobile {
+      width: 226px;
       padding-top: 48px;
       padding-right: 25px;
       padding-bottom: 35px;
@@ -150,4 +154,8 @@
          text-align: center;
        }
      }
+}
+
+.commnet-slider__info {
+  width: 560px;
 }
