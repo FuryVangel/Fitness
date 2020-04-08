@@ -10,7 +10,7 @@
     }
 
     @include mobile {
-      padding-top: 20px;
+      padding-top: 15px;
       padding-bottom: 70px;
     }
 
@@ -42,10 +42,38 @@
     height: 32px;
     background: url("../img/icons/arrow.svg");
     border: none;
-    border-radius: 3px;
+    outline: 0;
     cursor: pointer;
 
+    &:hover,
+    &focus {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-left: 0;
+      padding-right: 0;
+      width: 18px;
+      height: 32px;
+      background: url("../img/icons/arrow-blue.svg");
+
+      @include tablet {
+        top: 47%;
+      }
+
+      @include mobile {
+        top: 51%;
+        width: 14px;
+        height: 22px;
+        bottom: 126px;
+      }
+    }
+
+    @include tablet {
+      top: 47%;
+    }
+
     @include mobile {
+      top: 51%;
       width: 14px;
       height: 22px;
       bottom: 126px;
@@ -55,16 +83,24 @@
       left: -60px;
       transform: translateY(-50%) rotate(180deg);
 
+      @include tablet {
+        left: -56px;
+      }
+
       @include mobile {
-        left: -36px;
+        left: -33px;
       }
     }
 
     &:last-of-type {
       right: -60px;
 
+      @include tablet {
+        right: -56px;
+      }
+
       @include mobile {
-        right: -36px;
+        right: -33px;
       }
     }
 }
@@ -111,12 +147,9 @@
     font-family: $roboto;
     transition-duration: 0.4s;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/comment-desktop@2x.jpg");
-    }
-
     @include tablet {
       padding-left: 173px;
+      padding-right: 55px;
       background-position: 65px 62px;
     }
 
@@ -128,10 +161,6 @@
       padding-left: 25px;
       background-image: url("../img/comment-mobile@1x.png");
       background-position: 41px 40px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/comment-mobile@2x.jpg");
-      }
     }
 
     h3 {
@@ -154,8 +183,4 @@
          text-align: center;
        }
      }
-}
-
-.commnet-slider__info {
-  width: 560px;
 }

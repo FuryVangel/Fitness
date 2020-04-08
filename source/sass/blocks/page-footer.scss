@@ -5,11 +5,10 @@
 .page-footer__content {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 44px;
+    padding-bottom: 35px;
 
     @include tablet {
       padding-top: 41px;
-      padding-bottom: 48px;
     }
 
     @include mobile {
@@ -41,8 +40,10 @@
       position: absolute;
       left: calc(50% - 145px);
       margin-right: 0;
+      padding-top: 7px;
       font-size: 20px;
       line-height: 20px;
+      letter-spacing: 0.5px;
     }
 }
 
@@ -61,6 +62,7 @@
     }
 
     @include mobile {
+      display: flex;
       margin-bottom: 37px;
       max-width: none;
       width: 290px;
@@ -71,6 +73,7 @@
 
       @include mobile {
         width: 90px;
+        margin-bottom: 0;
       }
 
       &:not(:last-child) {

@@ -45,10 +45,6 @@
     background-repeat: no-repeat;
     background-position: right;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/fitness-bunny-desktop@2x.jpg");
-    }
-
     @include tablet {
       margin-right: 0;
       margin-bottom: 30px;
@@ -104,6 +100,10 @@
       font-family: $roboto;
       font-size: 18px;
       line-height: 25px;
+
+      @include tablet {
+        margin-bottom: 186px;
+      }
 
       @include mobile {
         text-align: center;
@@ -176,15 +176,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 35px 42px 43px 40px;
+      padding: 36px 42px 43px 40px;
       width: 290px;
     }
 
     h3 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       font-size: 26px;
       line-height: 26px;
       font-weight: 700;
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
     }
 
     p {

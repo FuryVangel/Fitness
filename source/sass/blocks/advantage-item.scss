@@ -11,12 +11,31 @@
       align-items: center;
       margin-bottom: 35px;
       width: 227px;
-    }
+    }   
 
     &:nth-child(2n):not(&--main) {
       justify-content: flex-end;
       margin-right: calc(100% - 820px);
       margin-left: 80px;
+
+      @media screen and (max-width: 1280px) {
+        margin-left: 0;
+      }
+
+      @include tablet {
+        margin-right: auto;
+        padding-left: 0;
+      }
+
+      @include mobile {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: 90px;
 
       @media screen and (max-width: 1280px) {
         margin-left: 0;
@@ -52,7 +71,7 @@
 
     &:not(:nth-child(-n + 3)) {
       position: relative;
-      margin-top: 75px;
+      margin-top: 77px;
       padding-top: 75px;
 
       @include tablet {
@@ -80,7 +99,7 @@
 
      h3 {
        margin-right: auto;
-       margin-bottom: 6px;
+       margin-bottom: 7px;
        color: $text-color;
        font-family: $roboto;
        font-size: 22px;
@@ -128,7 +147,7 @@
 
        @include mobile {
          margin-right: 0;
-         margin-bottom: 5px;
+         margin-bottom: 6px;
        }
 
        span {
@@ -229,6 +248,7 @@
 
             @include mobile {
                 line-height: 68px;
+                padding-bottom: 2px;
             }
         }
 

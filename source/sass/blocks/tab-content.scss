@@ -75,19 +75,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 63px 69px 67px;
+    padding: 58px 69px 67px;
     width: 360px;
     border: 7px solid transparent;
     background-color: $white;
 
     @include tablet {
-      padding: 60px 111px;
+      padding: 62px 111px 56px;
       width: 442px;
       height: 448px;
     }
 
     @include mobile {
-      padding: 45px 35px;
+      padding: 40px 35px;
       width: 290px;
       height: 384px;
     }
@@ -161,6 +161,10 @@
       font-weight: 700;
       line-height: 90px;
       z-index: 1;
+
+      @include tablet {
+        margin-bottom: 38px;
+      }
 
       @include mobile {
         margin-bottom: 30px;

@@ -18,15 +18,13 @@
     @include tablet {
       align-items: center;
       margin: 0 auto;
-      padding-right: 133px;
-      padding-bottom: 68px;
-      padding-left: 133px;
+      padding: 71px 133px 68px 133px;
       max-width: 1023px;
       min-width: 768px;
     }
 
     @include mobile {
-      padding: 68px 15px 69px;
+      padding: 73px 15px 69px;
       max-width: 767px;
       min-width: 320px;
     }
@@ -34,17 +32,19 @@
     h2 {
         @include h2;
         color: $white;
-        margin-bottom: 45px;
+        margin-bottom: 46px;
 
         @include tablet {
           margin-bottom: 40px;
           padding-right: 30px;
           width: 502px;
+          letter-spacing: 1.2px;
         }
 
         @include mobile {
           padding-right: 0;
           width: 290px;
+          letter-spacing: 1px;
         }
     }
 
@@ -71,12 +71,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 29px;
+    }
 
     @include mobile {
         width: 100%;
         flex-direction: column;
-        margin-bottom: 0;
+        margin-bottom: 2px;
     }
 
     input {

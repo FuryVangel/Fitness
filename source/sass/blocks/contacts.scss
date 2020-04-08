@@ -16,8 +16,7 @@
       flex-direction: column;
       align-items: center;
       margin: 0 auto;
-      padding-right: 103px;
-      padding-left: 103px;
+      padding: 69px 103px 64px;
       max-width: 1023px;
       min-width: 768px;
     }
@@ -39,7 +38,7 @@
       }
 
       @include mobile {
-        margin-bottom: 35px;
+        margin-bottom: 36px;
         padding-left: 0;
         width: 290px;
       }
@@ -52,13 +51,15 @@
     position: relative;
 
     @include tablet {
-      padding-left: 30px;
+      padding-left: 25px;
       width: 562px;
     }
 
     @include mobile {
       padding-left: 0;
       width: 290px;
+
+      display: flex;
     }
 
     &::before {
@@ -90,15 +91,36 @@
         }
 
         @include mobile {
-          width: 290px;
+          width: 290px;          
+
+          &:nth-child(1) {
+            order: 1;
+          }
+
+          &:nth-child(2) {
+            order: 3;
+          }
+
+          &:nth-child(3) {
+            order: 2;
+          }
+
+          &:nth-child(4) {
+            order: 4;
+          }
         }
 
         &:nth-child(2n + 1) {
           margin-left: 5px;
           margin-right: 120px;
 
+          @include tablet {
+            margin-right: 97px;
+          }
+
           @include mobile {
               margin-left: 0;
+              margin-right: 0;
           }
         }
 
