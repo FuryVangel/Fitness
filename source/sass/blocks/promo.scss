@@ -1,201 +1,201 @@
 .promo {
-    display: flex;
-    background-color: #000145;
-    background-image: url("../img/crossfit-desktop@1x.jpg");
-    background-size: 660px 500px;
-    background-position: right;
-    background-repeat: no-repeat;
-    width: 1160px;
+  display: flex;
+  background-color: #000145;
+  background-image: url("../img/crossfit-desktop@1x.jpg");
+  background-size: 660px 500px;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 1160px;
 
-    @media (min-resolution: 1.5dppx) {
-      background-image: url("../img/crossfit-desktop@2x.jpg");
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/crossfit-desktop@2x.jpg");
+  }
+
+  @include tablet {
+    width: 678px;
+    background-image: url("../img/crossfit-tablet@1x.jpg");
+    background-size: 386px 292px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/crossfit-tablet@2x.jpg");
     }
+  }
 
-    @include tablet {
-      width: 678px;
-      background-image: url("../img/crossfit-tablet@1x.jpg");
-      background-size: 386px 292px;
+  @include mobile {
+    width: 290px;
+    min-height: 584px;
+    background-color: $promo-bg;
+    background-image: url("../img/crossfit-mobile@1x.jpg");
+    background-size: 290px 292px;
+    background-position: bottom;
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/crossfit-tablet@2x.jpg");
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/crossfit-mobile@2x.jpg");
     }
-
-    @include mobile {
-      width: 290px;
-      min-height: 584px;
-      background-color: $promo-bg;
-      background-image: url("../img/crossfit-mobile@1x.jpg");
-      background-size: 290px 292px;
-      background-position: bottom;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/crossfit-mobile@2x.jpg");
-      }
-    }
+  }
 }
 
 .promo__info {
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    color: $white;
-    padding: 80px 70px 84px 78px;
-    width: 500px;
-    background-color: $promo-bg;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  color: $white;
+  padding: 80px 70px 84px 78px;
+  width: 500px;
+  background-color: $promo-bg;
+
+  @include tablet {
+    padding: 48px 44px 51px;
+    width: 292px;
+  }
+
+  @include mobile {
+    padding-top: 43px;
+    padding-bottom: 343px;
+    background: none;
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    margin-right: 48px;
+    width: 201px;
+    font-family: $bebas;
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: 3px;
 
     @include tablet {
-      padding: 48px 44px 51px;
-      width: 292px;
+      margin-bottom: 1px;
+      margin-right: 26px;
+      width: 118px;
+      font-size: 52px;
+      line-height: 52px;
+      letter-spacing: 2px;
     }
+  }
 
-    @include mobile {
-      padding-top: 46px;
-      padding-bottom: 343px;
-      background: none;
+  p {
+    margin-bottom: 45px;
+    font-family: $roboto;
+    font-size: 18px;
+    line-height: 27px;
+    width: 280px;
+
+    @include tablet {
+      margin-bottom: 29px;
+      font-size: 12px;
+      line-height: 18px;
     }
-
-    h3 {
-        margin-bottom: 8px;
-        margin-right: 48px;
-        width: 201px;
-        font-family: $bebas;
-        font-size: 90px;
-        line-height: 90px;
-        letter-spacing: 3px;
-
-        @include tablet {
-          margin-bottom: 1px;
-          margin-right: 26px;
-          width: 118px;
-          font-size: 52px;
-          line-height: 52px;
-          letter-spacing: 2px;
-        }
-    }
-
-    p {
-      margin-bottom: 45px;
-      font-family: $roboto;
-      font-size: 18px;
-      line-height: 27px;
-      width: 280px;
-
-      @include tablet {
-        margin-bottom: 29px;
-        font-size: 12px;
-        line-height: 18px;
-      }
-    }
+  }
 }
 
 .promo__link {
-    width: 346px;
-    height: 71px;
+  width: 346px;
+  height: 71px;
 
-    @include tablet {
-      height: 41px;
-      border-width: 2px;
-      font-size: 10px;
-      line-height: 12px;
-    }
+  @include tablet {
+    height: 41px;
+    border-width: 2px;
+    font-size: 10px;
+    line-height: 12px;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: $white;
-      color: $text-color;
-    }
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $text-color;
+  }
 
-    &:active {
-      opacity: 0.8;
-    }
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .promo-schedule {
-    tbody {
-      display: flex;
-      flex-direction: column;
+  tbody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+
+      @include tablet {
+        margin-bottom: 2px;
+      }
     }
+  }
 
-    tr {
-      display: flex;
-      flex-direction: column;
+  td {
+    display: flex;
+    padding: 0;
+    font-family: $roboto;
 
-      &:not(:last-child) {
-        margin-bottom: 13px;
+    &:first-child {
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 18px;
 
-        @include tablet {
-          margin-bottom: 2px;
-        }
+      @include tablet {
+        margin-bottom: 2px;
+        font-size: 12px;
+        line-height: 12px;
       }
     }
 
-    td {
-      display: flex;
-      padding: 0;
-      font-family: $roboto;
+    &:last-child {
+      position: relative;
+      align-items: center;
+      margin-right: auto;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
 
-      &:first-child {
-        margin-bottom: 4px;
-        font-size: 18px;
-        line-height: 18px;
-
-        @include tablet {
-          margin-bottom: 2px;
-          font-size: 12px;
-          line-height: 12px;
-        }
+      @include tablet {
+        font-size: 24px;
+        line-height: 36px;
       }
 
-      &:last-child {
-        position: relative;
-        align-items: center;
-        margin-right: auto;
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 60px;
-
-        @include tablet {
-          font-size: 24px;
-          line-height: 36px;
-        }
-
-        span {
-          &:first-child {
-            margin-right: 7px;
-
-            @include tablet {
-              margin-right: 3px;
-            }
-          }
-
-          &:last-child {
-            width: 37px;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 18px;
-
-            @include tablet {
-              width: 26px;
-              font-size: 10px;
-              line-height: 12px;
-            }
-          }
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 5px;
-          width: 100%;
-          height: 1px;
-          background-color: $white;
+      span {
+        &:first-child {
+          margin-right: 7px;
 
           @include tablet {
-            top: 2px;
+            margin-right: 3px;
+          }
+        }
+
+        &:last-child {
+          width: 37px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+
+          @include tablet {
+            width: 26px;
+            font-size: 10px;
+            line-height: 12px;
           }
         }
       }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+
+        @include tablet {
+          top: 2px;
+        }
+      }
     }
+  }
 }

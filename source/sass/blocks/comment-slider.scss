@@ -1,38 +1,52 @@
 .comment-slider__content {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 38px;
-    padding-bottom: 120px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 38px;
+  padding-bottom: 120px;
+
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    padding-top: 15px;
+    padding-bottom: 70px;
+  }
+
+  h2 {
+    @include h2;
+    margin-bottom: 52px;
 
     @include tablet {
-      padding-top: 40px;
-      padding-bottom: 100px;
+      margin-bottom: 40px;
     }
 
     @include mobile {
-      padding-top: 15px;
-      padding-bottom: 70px;
+      margin-bottom: 43px;
     }
-
-    h2 {
-      @include h2;
-      margin-bottom: 52px;
-
-      @include tablet {
-        margin-bottom: 40px;
-      }
-
-      @include mobile {
-        margin-bottom: 43px;
-      }
-    }
+  }
 }
 
 .comment-slider__container {
-    position: relative;
+  position: relative;
 }
 
 .comment-slider__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 0;
+  padding-right: 0;
+  width: 18px;
+  height: 32px;
+  background: url("../img/icons/arrow.svg") no-repeat;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+
+  &:hover,
+  &focus {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -40,37 +54,7 @@
     padding-right: 0;
     width: 18px;
     height: 32px;
-    background: url("../img/icons/arrow.svg");
-    border: none;
-    outline: 0;
-    cursor: pointer;
-
-    &:hover,
-    &focus {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding-left: 0;
-      padding-right: 0;
-      width: 18px;
-      height: 32px;
-      background: url("../img/icons/arrow-blue.svg");
-
-      @include tablet {
-        top: 47%;
-      }
-
-      @include mobile {
-        top: 51%;
-        width: 14px;
-        height: 22px;
-        bottom: 126px;
-      }
-    }
-
-    @include tablet {
-      top: 47%;
-    }
+    background: url("../img/icons/arrow-blue.svg") no-repeat;
 
     @include mobile {
       top: 51%;
@@ -78,109 +62,117 @@
       height: 22px;
       bottom: 126px;
     }
+  }
 
-    &:first-of-type {
-      left: -60px;
-      transform: translateY(-50%) rotate(180deg);
+  @include mobile {
+    top: 51%;
+    width: 14px;
+    height: 22px;
+    bottom: 126px;
+  }
 
-      @include tablet {
-        left: -56px;
-      }
+  &:first-of-type {
+    left: -60px;
+    transform: translateY(-50%) rotate(180deg);
 
-      @include mobile {
-        left: -33px;
-      }
+    @include tablet {
+      left: -56px;
     }
 
-    &:last-of-type {
-      right: -60px;
-
-      @include tablet {
-        right: -56px;
-      }
-
-      @include mobile {
-        right: -33px;
-      }
+    @include mobile {
+      left: -33px;
     }
+  }
+
+  &:last-of-type {
+    right: -60px;
+
+    @include tablet {
+      right: -56px;
+    }
+
+    @include mobile {
+      right: -33px;
+    }
+  }
 }
 
 .comment-slider__list-wrapper {
-    overflow: hidden;
-    width: 560px;
+  overflow: hidden;
+  width: 560px;
 
-    @include tablet {
-      width: 566px;
-    }
+  @include tablet {
+    width: 566px;
+  }
 
-    @include mobile {
-      width: 226px;
-    }
+  @include mobile {
+    width: 226px;
+  }
 }
 
 .comment-slider__list {
-    display: flex;
-    transition-duration: 0.4s;
+  display: flex;
+  transition-duration: 0.4s;
 
-    li {
-      margin-right: 30px;
+  li {
+    margin-right: 30px;
 
-      @include mobile {
-        margin-right: 0;
-      }
+    @include mobile {
+      margin-right: 0;
     }
+  }
 }
 
 .comment-slider__item {
-    flex-shrink: 0;
-    padding-top: 54px;
-    padding-right: 62px;
-    padding-bottom: 57px;
-    padding-left: 170px;
-    width: 560px;
-    transform: translateX(0);
-    background-color: $text-color;
-    background-image: url("../img/comment-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-position: 62px 62px;
-    color: $white;
-    font-family: $roboto;
-    transition-duration: 0.4s;
+  flex-shrink: 0;
+  padding-top: 54px;
+  padding-right: 62px;
+  padding-bottom: 57px;
+  padding-left: 170px;
+  width: 560px;
+  transform: translateX(0);
+  background-color: $text-color;
+  background-image: url("../img/comment-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 62px 62px;
+  color: $white;
+  font-family: $roboto;
+  transition-duration: 0.4s;
 
-    @include tablet {
-      padding-left: 173px;
-      padding-right: 55px;
-      background-position: 65px 62px;
-    }
+  @include tablet {
+    padding-left: 173px;
+    padding-right: 55px;
+    background-position: 65px 62px;
+  }
+
+  @include mobile {
+    width: 226px;
+    padding-top: 48px;
+    padding-right: 25px;
+    padding-bottom: 35px;
+    padding-left: 25px;
+    background-image: url("../img/comment-mobile@1x.png");
+    background-position: 41px 40px;
+  }
+
+  h3 {
+    margin-bottom: 13px;
+    font-size: 20px;
+    line-height: 30px;
 
     @include mobile {
-      width: 226px;
-      padding-top: 48px;
-      padding-right: 25px;
-      padding-bottom: 35px;
-      padding-left: 25px;
-      background-image: url("../img/comment-mobile@1x.png");
-      background-position: 41px 40px;
+      margin-bottom: 24px;
+      padding-left: 100px;
+      line-height: 26px;
     }
+  }
 
-    h3 {
-      margin-bottom: 13px;
-      font-size: 20px;
-      line-height: 30px;
+  p {
+    font-size: 16px;
+    line-height: 22px;
 
-      @include mobile {
-        margin-bottom: 24px;
-        padding-left: 100px;
-        line-height: 26px;
-      }
+    @include mobile {
+      text-align: center;
     }
-
-    p {
-       font-size: 16px;
-       line-height: 22px;
-
-       @include mobile {
-         text-align: center;
-       }
-     }
+  }
 }

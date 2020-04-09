@@ -91,7 +91,7 @@ main {
     padding-right: 45px;
   }
 
-  @include  mobile {
+  @include mobile {
     max-width: 767px;
     min-width: 320px;
     padding-left: 15px;

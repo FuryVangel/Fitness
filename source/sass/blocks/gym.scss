@@ -42,7 +42,7 @@
     text-align: left;
     margin-bottom: 0;
     padding-top: 32px;
-  }  
+  }
 
   h2 {
     @include h2;
@@ -74,7 +74,7 @@
     font-family: $roboto;
     font-weight: 300;
     font-size: 16px;
-    line-height: 24px;   
+    line-height: 24px;
     margin-bottom: 8px;
 
     @include tablet {
@@ -94,15 +94,15 @@
   }
 }
 
-.gym__img img{
+.gym__img img {
   width: 660px;
   height: 401px;
-  background-color: #BFC0CA;
+  background-color: #bfc0ca;
 
   @include tablet {
     width: 678px;
     height: 345px;
-    margin: 0 auto;    
+    margin: 0 auto;
   }
 
   @include mobile {
@@ -161,13 +161,13 @@
 }
 
 .gym__video img {
-  background-color: #BFC0CA;
-  
+  background-color: #bfc0ca;
+
   @include tablet {
     width: 266px;
     height: 167px;
   }
-  
+
   @include mobile {
     position: relative;
     top: 0;
@@ -195,7 +195,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-color: transparent;
-  border: none;  
+  border: none;
   z-index: 2;
 
   &:hover,

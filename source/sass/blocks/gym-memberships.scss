@@ -1,17 +1,17 @@
 .gym-memberships {
-    padding-top: 60px;
-    padding-bottom: 120px;
-    background-color: $bg-grey;
+  padding-top: 60px;
+  padding-bottom: 120px;
+  background-color: $bg-grey;
 
-    @include tablet {
-      padding-top: 50px;
-      padding-bottom: 100px;
-    }
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
 
-    @include mobile {
-      padding-top: 30px;
-      padding-bottom: 70px;
-    }
+  @include mobile {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
 }
 
 .gym-memberships__content {
@@ -45,13 +45,13 @@
 }
 
 .gym-memberships__tab-header {
-    margin-bottom: 39px;
+  margin-bottom: 39px;
 
-    @include tablet {
-      margin-bottom: 45px;
-    }
+  @include tablet {
+    margin-bottom: 45px;
+  }
 
-    @include mobile {
-      margin-bottom: 34px;
-    }
+  @include mobile {
+    margin-bottom: 34px;
+  }
 }

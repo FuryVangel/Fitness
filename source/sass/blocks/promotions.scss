@@ -1,228 +1,240 @@
 .promotions__content {
-    align-items: center;
-    flex-direction: column;
-    padding-top: 120px;
-    padding-bottom: 80px;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  @include mobile {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  h2 {
+    @include h2;
+    margin-bottom: 50px;
 
     @include tablet {
-      padding-top: 100px;
-      padding-bottom: 60px;
+      margin-bottom: 41px;
     }
-
-    @include mobile {
-      padding-top: 70px;
-      padding-bottom: 50px;
-    }
-
-    h2 {
-      @include h2;
-      margin-bottom: 50px;
-
-      @include tablet {
-        margin-bottom: 41px;
-      }
-    }
+  }
 }
 
 .promotions__info {
-    display: flex;
+  display: flex;
 
-    @include tablet {
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: nowrap;
-    }
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }
 
 .promotions__main {
-    margin-right: 40px;
-    padding: 41px 326px 32px 45px;
-    width: 560px;
-    height: 462px;
-    overflow: hidden;
-    background-color: #ed0233;
-    background-image: url("../img/fitness-bunny-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
+  margin-right: 40px;
+  padding: 41px 326px 32px 45px;
+  width: 560px;
+  height: 462px;
+  overflow: hidden;
+  background-color: #ed0233;
+  background-image: url("../img/fitness-bunny-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
 
-    @include tablet {
-      margin-right: 0;
-      margin-bottom: 30px;
-      padding-right: 440px;
-      padding-bottom: 43px;
-      width: 678px;
-      background-image: url("../img/fitness-bunny-tablet@1x.jpg");
+  @include tablet {
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding-right: 440px;
+    padding-bottom: 43px;
+    width: 678px;
+    background-image: url("../img/fitness-bunny-tablet@1x.jpg");
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 42px 50px 343px;
+    width: 290px;
+    height: auto;
+    background-image: url("../img/fitness-bunny-mobile@1x.jpg");
+    background-position: bottom;
+  }
+
+  h3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    span {
+      color: $white;
+      font-family: $roboto;
+      font-weight: 700;
+
+      &:first-child {
+        margin-bottom: 3px;
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      &:last-child {
+        font-size: 70px;
+        line-height: 70px;
+      }
     }
 
     @include mobile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 42px 50px 343px;
-      width: 290px;
-      height: auto;
-      background-image: url("../img/fitness-bunny-mobile@1x.jpg");
-      background-position: bottom;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    margin-bottom: 188px;
+    background-position: right;
+    color: $white;
+    font-family: $roboto;
+    font-size: 18px;
+    line-height: 25px;
+
+    @include tablet {
+      margin-bottom: 186px;
     }
 
-    h3 {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-
-      span {
-        color: $white;
-        font-family: $roboto;
-        font-weight: 700;
-
-        &:first-child {
-          margin-bottom: 3px;
-          font-size: 28px;
-          line-height: 28px;
-        }
-
-        &:last-child {
-          font-size: 70px;
-          line-height: 70px;
-        }
-      }
-
-      @include mobile {
-        text-align: center;
-        margin-bottom: 15px;
-      }
+    @include mobile {
+      text-align: center;
+      margin-bottom: 30px;
     }
-
-    p {
-      margin-bottom: 188px;
-      background-position: right;
-      color: $white;
-      font-family: $roboto;
-      font-size: 18px;
-      line-height: 25px;
-
-      @include tablet {
-        margin-bottom: 186px;
-      }
-
-      @include mobile {
-        text-align: center;
-        margin-bottom: 30px;
-      }    
-    }
+  }
 }
 
 .promotions__link {
-    border-bottom: 1px solid $white;
-    color: $white;
-    font-family: $roboto;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
+  border-bottom: 1px solid $white;
+  color: $white;
+  font-family: $roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
 
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 
-    &:active {
-      opacity: 0.6;
-    }
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .promotions__list {
-    li:not(:last-child) {
-      margin-bottom: 40px;
-
-      @include tablet {
-        margin-right: 30px;
-        margin-bottom: 0;
-      }
-
-      @include mobile {
-        margin-right: 0;
-        margin-bottom: 30px;
-      }
-    }
+  li:not(:last-child) {
+    margin-bottom: 40px;
 
     @include tablet {
-      display: flex;
+      margin-right: 30px;
+      margin-bottom: 0;
     }
 
     @include mobile {
-      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: 30px;
     }
+  }
+
+  @include tablet {
+    display: flex;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .promotion-item {
-    padding: 25px 210px 29px 29px;
-    width: 560px;
-    font-family: $roboto;
-    color: $text-color;
-    border-width: 7px;
-    border-style: solid;
-    border-image-source: linear-gradient(143.02deg, #d10a42 0.85%, #00359f 100%);
-    border-image-slice: 1;
+  padding: 25px 210px 29px 29px;
+  width: 560px;
+  font-family: $roboto;
+  color: $text-color;
+  border-width: 7px;
+  border-style: solid;
+  border-image-source: linear-gradient(143.02deg, #d10a42 0.85%, #00359f 100%);
+  border-image-slice: 1;
+
+  @include tablet {
+    padding: 24px 38px 28px 27px;
+    width: 324px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 42px 43px 40px;
+    width: 290px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
 
     @include tablet {
-      padding: 24px 38px 28px 27px;
-      width: 324px;
+      margin-bottom: 12px;
     }
 
     @include mobile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 36px 42px 43px 40px;
-      width: 290px;
+      margin-bottom: 12px;
+    }
+  }
+
+  p {
+    margin-bottom: 69px;
+
+    @include tablet {
+      margin-bottom: 45px;
+      min-height: 44px;
+      line-height: 22px;
     }
 
-    h3 {
-      margin-bottom: 10px;
-      font-size: 26px;
-      line-height: 26px;
-      font-weight: 700;
+    @include mobile {
+      margin-bottom: 26px;
+      text-align: center;
+    }
+  }
 
-      @include mobile {
-        margin-bottom: 12px;
+  &:last-child {
+    @include mobile {
+      h3 {
+        margin-bottom: 10px;
       }
     }
-
-    p {
-      margin-bottom: 69px;
-
-      @include tablet {
-        margin-bottom: 45px;
-        min-height: 44px;
-        line-height: 22px;
-      }
-
-      @include mobile {
-        margin-bottom: 25px;
-        text-align: center;
-      }
-    }
+  }
 }
 
 .promotion-item__link {
-    border-bottom: 1px solid $text-color;
-    color: $text-color;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
+  border-bottom: 1px solid $text-color;
+  color: $text-color;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
 
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 
-    &:active {
-      opacity: 0.6;
-    }
+  &:active {
+    opacity: 0.6;
+  }
 }
