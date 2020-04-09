@@ -1,13 +1,16 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', function () {
-  var jsTriggers = document.querySelectorAll('.js-tab-trigger');
   var coachesButtonPrev = document.querySelector('.coaches-slider__button--prev');
   var coachesButtonNext = document.querySelector('.coaches-slider__button--next');
   var commentButtonPrev = document.querySelector('.comment-slider__button--prev');
   var commentButtonNext = document.querySelector('.comment-slider__button--next');
   var coachesList = document.querySelectorAll('.coaches-slider__item');
   var commentsList = document.querySelectorAll('.comment-slider__item');
+  var switchesTab = document.querySelector('.gym-memberships__tab-header');
+  var switchesTabItems = Array.from(switchesTab.children);
+  var tabButtons = document.querySelectorAll('.tab-header__button');
+  var tabContent = document.querySelectorAll('.gym-memberships__tab-content');
 
   var coaches = {
     slider: document.querySelector('.coaches-slider__list'),
@@ -33,26 +36,26 @@ window.addEventListener('DOMContentLoaded', function () {
     },
   };
 
-
   // Табы
-  var tabTrigger = function (trigger) {
-    trigger.addEventListener('click', function () {
-      var id = this.getAttribute('data-tab');
-      var content = document.querySelector('.js-tab-content[data-tab="' + id + '"]');
-      var activeTrigger = document.querySelector('.js-tab-trigger.active');
-      var activeContent = document.querySelector('.js-tab-content.active');
+  switchesTab.addEventListener('click', function (evt) {
+    var target = evt.target;
+    if (target.classList.contains('tab-header__button')) {
+      tabContent.forEach(function (item) {
+        if (!item.classList.contains('hidden')) {
+          item.classList.add('hidden');
+        }
+      });
+      tabButtons.forEach(function (item) {
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+        }
+      });
 
-      activeTrigger.classList.remove('active');
-      trigger.classList.add('active');
-
-      activeContent.classList.remove('active');
-      content.classList.add('active');
-    });
-  };
-
-  for (var i = 0; i < jsTriggers.length; i++) {
-    tabTrigger(jsTriggers[i]);
-  }
+      var indexTarget = switchesTabItems.indexOf(target.parentElement);
+      tabContent[indexTarget].classList.remove('hidden');
+      target.classList.add('active');
+    }
+  });
 
   // Скролл
   var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
