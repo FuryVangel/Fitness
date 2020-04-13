@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 'use strict';
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -86,12 +87,13 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   // Валидация для телефона
+  // eslint-disable-next-line no-undef
   IMask(document.querySelector('#phone'), {
     mask: '+{7}(000)000-00-00'
   });
 
   // Слайдер
-  var slider = function (slider, direction) {
+  var slideImg = function (slider, direction) {
     var visibleCount = 1;
     var cardWidth = slider.cardWidth;
 
@@ -122,18 +124,18 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   commentButtonPrev.addEventListener('click', function () {
-    slider(comments, 'prev');
+    slideImg(comments, 'prev');
   });
 
   commentButtonNext.addEventListener('click', function () {
-    slider(comments, 'next');
+    slideImg(comments, 'next');
   });
 
   coachesButtonPrev.addEventListener('click', function () {
-    slider(coaches, 'prev');
+    slideImg(coaches, 'prev');
   });
 
   coachesButtonNext.addEventListener('click', function () {
-    slider(coaches, 'next');
+    slideImg(coaches, 'next');
   });
 });
