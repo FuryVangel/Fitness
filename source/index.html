@@ -51,12 +51,14 @@
       </div>
       <div class="gym__img">
         <picture>
+          <!-- 1x: 660px; 2x: 1320px -->
           <source srcset="img/gym@1x.webp 1x, img/gym@2x.webp 2x" type="image/webp">
           <img src="img/gym@1x.jpg" srcset="img/gym@2x.jpg 2x" width="660" height="401" alt="Изображение тренажерного зала SUPERGYM">
         </picture>
       </div>
       <div class="gym__video">
         <picture>
+          <!-- 1x: 364px; 2x: 728px -->
           <source srcset="img/gym-video@1x.webp 1x, img/gym-video@2x.webp 2x" type="image/webp">
           <img src="img/gym-video@1x.jpg" srcset="img/gym-videop@2x.jpg 2x" width="364" height="228" alt="Видео обзор тренажерного зала SUPERGYM">
         </picture>
@@ -68,34 +70,28 @@
         <div id="gym-memberships__content" class="gym-memberships__content container">
           <h2>Абонементы</h2>
           <ul class="gym-memberships__tab-header tab-header">
-            <li>
-              <button class="tab-header__button active"><span>1 месяц</span></button>
-            </li>
-            <li>
-              <button class="tab-header__button"><span>6 месяцев</span></button>
-            </li>
-            <li>
-              <button class="tab-header__button"><span>12 месяцев</span></button>
-            </li>
+            <li><button class="tab-header__button active" type="button"><span>1 месяц</span></button></li>
+            <li><button class="tab-header__button" type="button"><span>6 месяцев</span></button></li>
+            <li><button class="tab-header__button" type="button"><span>12 месяцев</span></button></li>
           </ul>
           <ul class="gym-memberships__tab-content tab-content">
             <li class="tab-content__item">
               <h3>С тренером</h3>
               <p>12 занятий</p>
               <p data-value="5000">5000 <span>&#8381;</span></p>
-              <a class="tab-content__link  cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link  cta-btn" href="#">Купить абонемент</a>
             </li>
             <li class="tab-content__item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00</p>
               <p data-value="1700">1700 <span>&#8381;</span></p>
-              <a class="tab-content__link cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link cta-btn" href="#">Купить абонемент</a>
             </li>
             <li class="tab-content__item">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00</p>
               <p data-value="2700">2700 <span>&#8381;</span></p>
-              <a class="tab-content__link cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link cta-btn" href="#">Купить абонемент</a>
             </li>
           </ul>
           <ul class="gym-memberships__tab-content tab-content hidden">
@@ -103,19 +99,19 @@
               <h3>С тренером</h3>
               <p>72 занятия</p>
               <p data-value="27000">27000 <span>&#8381;</span></p>
-              <a class="tab-content__link  cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link  cta-btn" href="#">Купить абонемент</a>
             </li>
             <li class="tab-content__item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00</p>
               <p data-value="1500">1500 <span>&#8381;</span></p>
-              <a class="tab-content__link  cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link  cta-btn" href="#">Купить абонемент</a>
             </li>
             <li class="tab-content__item">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00</p>
               <p data-value="2500">2500 <span>&#8381;</span></p>
-              <a class="tab-content__link  cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link  cta-btn" href="#">Купить абонемент</a>
             </li>
           </ul>
           <ul class="gym-memberships__tab-content tab-content hidden">
@@ -123,19 +119,19 @@
               <h3>С тренером</h3>
               <p>144 занятия</p>
               <p data-value="48000">48000 <span>&#8381;</span></p>
-              <a class="tab-content__link cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link cta-btn" href="#">Купить абонемент</a>
             </li>
             <li class="tab-content__item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00</p>
               <p data-value="1300">1300 <span>&#8381;</span></p>
-              <a class="tab-content__link cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link cta-btn" href="#">Купить абонемент</a>
             </li>
             <li class="tab-content__item">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00</p>
               <p data-value="2300">2300 <span>&#8381;</span></p>
-              <a class="tab-content__link cta-btn" href="">Купить абонемент</a>
+              <a class="tab-content__link cta-btn" href="#">Купить абонемент</a>
             </li>
           </ul>
         </div>
@@ -145,24 +141,37 @@
           <h2 class="visually-hidden">Ежегодные соревнования по кроссфиту</h2>
           <div class="competition__promo  promo">
             <div class="promo__info">
-              <h3>Super Games</h3>
-              <table class="promo-schedule">
-                <tbody>
-                  <tr>
-                    <td>Дата</td>
-                    <td>
-                      <span>7</span>
-                      <span>Марта 2019</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Время</td>
-                    <td>12:00</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>Ежегодные соревнования по <span>CrossFit</span></p>
-              <a class="promo__link  cta-btn" href="">Заполнить заявку</a>
+              <div class="promo__title">
+                <h3>Super Games</h3>
+                <table class="promo-schedule">
+                  <tbody>
+                    <tr>
+                      <td>Дата</td>
+                      <td>
+                        <span>7</span>
+                        <span>Марта 2019</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Время</td>
+                      <td>12:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Ежегодные соревнования по CrossFit</p>
+              <a class="promo__link  cta-btn" href="#">Заполнить заявку</a>
+            </div>
+            <div class="promo__img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/CrossFit.webp 1x, img/CrossFit@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/CrossFit-tablet.webp 1x, img/CrossFit-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/CrossFit-mobile.webp 1x, img/CrossFit-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/CrossFit.jpg 1x, img/CrossFit@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/CrossFit-tablet.jpg 1x, img/CrossFit-tablet@2x.jpg 2x">
+                <img src="img/CrossFit-mobile.jpg" srcset="img/CrossFit-mobile.jpg 1x, img/CrossFit-mobile@2x.jpg 2x" alt="Кроссфит спортсмен">
+              </picture>
             </div>
           </div>
         </div>
@@ -190,6 +199,7 @@
                   </div>
                   <div class="coach__image">
                     <picture>
+                      <!-- 1x: 260px; 2x: 520px -->
                       <source type="image/webp" srcset="img/coach-1@1x.webp 1x, img/coach-1@2x.webp 2x">
                       <img src="img/coach-1@1x.jpg" srcset="img/coach-1@1x.jpg 1x, img/coach-1@2x.jpg 2x"
                         alt="Фотография тренера Анны Павловой">
@@ -212,8 +222,9 @@
                 </div>
                 <div class="coach__image">
                   <picture>
+                    <!-- 1x: 260px; 2x: 520px -->
                     <source type="image/webp" srcset="img/coach-2@1x.webp 1x, img/coach-2@2x.webp 2x">
-                    <img src="img/coach-2@1x.jpg" srcset="img/coach-1@1x.jpg 1x, img/coach-2@2x.jpg 2x"
+                    <img src="img/coach-2@1x.jpg" srcset="img/coach-2@1x.jpg 1x, img/coach-2@2x.jpg 2x"
                       alt="Фотография тренера Алексея Лаврова">
                   </picture>
                 </div>
@@ -234,6 +245,7 @@
                 </div>
                 <div class="coach__image">
                   <picture>
+                    <!-- 1x: 260px; 2x: 520px -->
                     <source type="image/webp" srcset="img/coach-3@1x.webp 1x, img/coach-3@2x.webp 2x">
                     <img src="img/coach-3@1x.jpg" srcset="img/coach-3@1x.jpg 1x, img/coach-3@2x.jpg 2x"
                       alt="Фотография тренера Александра Пашкова">
@@ -256,6 +268,7 @@
                 </div>
                 <div class="coach__image">
                   <picture>
+                    <!-- 1x: 260px; 2x: 520px -->
                     <source type="image/webp" srcset="img/coach-4@1x.webp 1x, img/coach-4@2x.webp 2x">
                     <img src="img/coach-4@1x.jpg" srcset="img/coach-4@1x.jpg 1x, img/coach-4@2x.jpg 2x"
                       alt="Фотография тренера Марии Кетовой">
@@ -278,6 +291,7 @@
                   </div>
                   <div class="coach__image">
                     <picture>
+                      <!-- 1x: 260px; 2x: 520px -->
                       <source type="image/webp" srcset="img/coach-1@1x.webp 1x, img/coach-1@2x.webp 2x">
                       <img src="img/coach-1@1x.jpg" srcset="img/coach-1@1x.jpg 1x, img/coach-1@2x.jpg 2x"
                         alt="Фотография тренера Анны Павловой">
@@ -300,8 +314,9 @@
                   </div>
                   <div class="coach__image">
                     <picture>
+                      <!-- 1x: 260px; 2x: 520px -->
                       <source type="image/webp" srcset="img/coach-2@1x.webp 1x, img/coach-2@2x.webp 2x">
-                      <img src="img/coach-2@1x.jpg" srcset="img/coach-1@1x.jpg 1x, img/coach-2@2x.jpg 2x"
+                      <img src="img/coach-2@1x.jpg" srcset="img/coach-2@1x.jpg 1x, img/coach-2@2x.jpg 2x"
                         alt="Фотография тренера Алексея Лаврова">
                     </picture>
                   </div>
@@ -322,6 +337,7 @@
                   </div>
                   <div class="coach__image">
                     <picture>
+                      <!-- 1x: 260px; 2x: 520px -->
                       <source type="image/webp" srcset="img/coach-3@1x.webp 1x, img/coach-3@2x.webp 2x">
                       <img src="img/coach-3@1x.jpg" srcset="img/coach-3@1x.jpg 1x, img/coach-3@2x.jpg 2x"
                         alt="Фотография тренера Александра Пашкова">
@@ -344,6 +360,7 @@
                   </div>
                   <div class="coach__image">
                     <picture>
+                      <!-- 1x: 260px; 2x: 520px -->
                       <source type="image/webp" srcset="img/coach-4@1x.webp 1x, img/coach-4@2x.webp 2x">
                       <img src="img/coach-4@1x.jpg" srcset="img/coach-4@1x.jpg 1x, img/coach-4@2x.jpg 2x"
                         alt="Фотография тренера Марии Кетовой">
@@ -412,16 +429,30 @@
       </div>
     </section>
     <section class="promotions">
-      <div class="promotions__content  container">
+      <div class="promotions__content ">
         <h2>Акции</h2>
         <div class="promotions__info">
           <div class="promotions__main">
-            <h3>
-            <span>Год</span>
-            <span>4999</span>
-            </h3>
-            <p>Безлимитный абонемент в тренажерный зал</p>
-            <a class="promotions__link" href="#">Подробнее</a>
+            <div class="promotions__text">
+              <h3>
+                <span>Год</span>
+                <span>4999</span>
+              </h3>
+              <p>Безлимитный абонемент в тренажерный зал</p>
+              <a class="promotions__link" href="#">Подробнее</a>
+            </div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/fitness-bunny-desktop.webp 1x, img/fitness-bunny-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/fitness-bunny-tablet.webp 1x, img/fitness-bunny-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/fitness-bunny-mobile.webp 1x, img/fitness-bunny-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/fitness-bunny-desktop.jpg 1x, img/fitness-bunny-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/fitness-bunny-tablet.jpg 1x, img/fitness-bunny-tablet@2x.jpg 2x">
+              <img src="img/fitness-bunny-mobile.jpg" srcset="img/fitness-bunny-mobile.jpg 1x, img/fitness-bunny-mobile@2x.jpg 2x"
+                alt="Спортивная девушка">
+            </picture>
           </div>
           <ul class="promotions__list">
             <li class="promotion-item">
@@ -446,13 +477,20 @@
           <div class="comment-slider__list-wrapper">
             <ul class="comment-slider__list">
               <li class="comment-slider__item">
-                <h3>Анна Орлова</h3>
+                <div class="comment-slider__avatar">
+                  <img src="img/comment-ava.png" width="80" height="80"  alt="Комментатор">
+                  <h3>Анна Орлова</h3>
+                </div>
                 <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
                   дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
               </li>
               <li class="comment-slider__item">
-                <h3>Анна Орлова</h3>
-                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                <div class="comment-slider__avatar">
+                  <img src="img/comment-ava.png" width="80" height="80" alt="Комментатор">
+                  <h3>Анна Орлова</h3>
+                </div>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+                  дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
               </li>
             </ul>
           </div>
@@ -504,6 +542,7 @@
     <div class="page-footer__content  container">
       <a class="page-footer__logo" href="#">SuperGym</a>
       <ul class="page-footer__list">
+        <li><a class="page-footer__logo-mobile" href="#">SuperGym</a></li>
         <li><a href="#">Услуги</a></li>
         <li><a href="#">Абонементы</a></li>
         <li><a href="#">Акции</a></li>
@@ -517,6 +556,7 @@
       </ul>
     </div>
   </footer>
+  <script src="js/polyfills.js"></script>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

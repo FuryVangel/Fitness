@@ -2,7 +2,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 40px;
+  padding-top: 35px;
   padding-bottom: 120px;
 
   @include tablet {
@@ -11,8 +11,7 @@
   }
 
   @include mobile {
-    padding-top: 24px;
-    padding-bottom: 70px;
+    padding: 24px 47px 70px;
   }
 
   h2 {
@@ -33,6 +32,10 @@
 
 .coaches-slider__container {
   position: relative;
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .coaches-slider__button {
@@ -61,6 +64,7 @@
       width: 14px;
       height: 22px;
       bottom: 126px;
+      top: 47%;
     }
   }
 
@@ -68,6 +72,7 @@
     width: 14px;
     height: 22px;
     bottom: 126px;
+    top: 47%;
   }
 
   &:first-of-type {
@@ -79,7 +84,7 @@
     }
 
     @include mobile {
-      left: -19px;
+      left: -35px;
     }
   }
 
@@ -91,7 +96,7 @@
     }
 
     @include mobile {
-      right: -19px;
+      right: -35px;
     }
   }
 }
@@ -117,7 +122,7 @@
   }
 
   @include mobile {
-    width: 256px;
+    width: 100%;
   }
 }
 
@@ -140,9 +145,13 @@
     }
 
     @include mobile {
-      height: 274px;
-      width: 256px;
-      margin: 0;
+      height: 100%;
+      width: 100%;
+      margin-right: 15px;
     }
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }
