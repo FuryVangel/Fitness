@@ -83,12 +83,9 @@
 
   @include tablet {
     margin-right: 0;
-    // margin-bottom: 30px;
-    // padding-right: 440px;
     padding-top: 42px;
     padding-bottom: 43px;
     width: calc(100% - 399px);
-    // width: 678px;
   }
 
   @include mobile {
